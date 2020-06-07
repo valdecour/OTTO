@@ -1,4 +1,8 @@
 #include <Arduino.h>
+#include <Servo.h>
+
+
+Servo myservo;  // create servo object to control a servo
 
 void setup()
 {
@@ -6,6 +10,7 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
   Serial.println("Start");
+  myservo.attach(2);
 
 }
 
@@ -21,6 +26,10 @@ void loop()
   Serial.println("Low");
    // wait for a second
   delay(1000);
+  myservo.write(50);                  // sets the servo position according to the scaled value
+  delay(550);
+  myservo.write(250); 
+
 }
 
 
