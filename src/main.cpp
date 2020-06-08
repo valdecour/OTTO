@@ -11,7 +11,7 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
   Serial.println("Start");
-  // indique que la servo est sur le pin 2 de la carte nano
+  // indique que la servo est sur le pin 2 de la carte nano pour faire un test
   myservo.attach(2);
 
 }
@@ -30,7 +30,7 @@ void loop()
   delay(1000);
   myservo.write(50);                  // sets the servo position according to the scaled value
   delay(550);
-  myservo.write(250); 
+  myservo.write(250); // envoie la servo à une autre position
 
 }
 
