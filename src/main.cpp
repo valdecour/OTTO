@@ -1,4 +1,5 @@
 #include <Arduino.h>
+// inclus la librairie servo
 #include <Servo.h>
 
 
@@ -10,6 +11,7 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
   Serial.println("Start");
+  // indique que la servo est sur le pin 2 de la carte nano
   myservo.attach(2);
 
 }
